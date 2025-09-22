@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+</head>
+<body>
+<h1>Личный кабинет</h1>
+
+<div>
+    <p><strong>ID:</strong> <span th:text="${user.id}"></span></p>
+    <p><strong>Имя пользователя:</strong> <span th:text="${user.username}"></span></p>
+    <p><strong>Пароль:</strong> <span th:text="${user.password}"></span></p>
+    <p><strong>Роли:</strong> <span th:text="${user.roles}"></span> </p>
+</div>
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Выход</button>
+</form>
+</body>
+</html>
